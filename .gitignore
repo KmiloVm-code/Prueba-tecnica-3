@@ -1,0 +1,49 @@
+# .gitignore - Node + Express
+# Ignorar dependencias, archivos generados y secretos
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+.env.test
+/secrets/
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+
+# Build / output
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Caches
+.cache/
+.parcel-cache/
+.vite/
+.sass-cache/
+*.tgz
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Uploaded files / temp
+uploads/
+tmp/
+temp/
+
+# Test reports
+test-results/
