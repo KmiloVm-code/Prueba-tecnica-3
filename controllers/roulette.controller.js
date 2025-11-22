@@ -66,7 +66,7 @@ export const closeRoulette = async (req, res) => {
     }
     roulette.status = "closed";
     // Logic to determine the result and update bets goes here
-    const winningNumber = Math.floor(Math.random() * 36) + 1;
+    const winningNumber = Math.floor(Math.random() * 37);
     const winningColor = winningNumber % 2 === 0 ? "red" : "black";
     roulette.result = {
       number: winningNumber,

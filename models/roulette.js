@@ -26,7 +26,7 @@ const rouletteSchema = new mongoose.Schema(
         },
         number: {
           type: Number,
-          min: [1, "Number must be at least 1"],
+          min: [0, "Number must be at least 0"],
           max: [36, "Number must be at most 36"],
           required: [
             function () {
