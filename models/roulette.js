@@ -54,8 +54,29 @@ const rouletteSchema = new mongoose.Schema(
           min: [1, "Minimum amount is 1"],
           max: [10000, "Maximum amount is 10000"],
         },
+        state: {
+          type: String,
+          enum: {
+            values: ["pending", "won", "lost"],
+            message: "State must be 'pending', 'won', or 'lost'",
+          },
+          default: "pending",
+        },
+        amountWon: {
+          type: Number,
+          default: 0,
+        },
       },
     ],
+    result: {
+      number: {
+        type: Number,
+      },
+      color: {
+        type: String,
+        enum: ["red", "black"],
+      },
+    },
   },
   {
     timestamps: true,
