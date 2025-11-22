@@ -91,3 +91,12 @@ export const closeRoulette = async (req, res) => {
     res.status(500).json({ message: "Error closing roulette", error });
   }
 };
+
+export const getAllRoulettes = async (req, res) => {
+  try {
+    const roulettes = await Roulette.find();
+    res.status(200).json(roulettes);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching roulettes", error });
+  }
+};
